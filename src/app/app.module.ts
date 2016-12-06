@@ -28,9 +28,11 @@ import { TermsComponent } from './1/terms/terms.component';
 // Footer
 import { FooterComponent } from './1/footer/footer.component';
 
+// Modal
+import { ModalComponent } from './1/footer/modal/modal.component';
+
 import { routing } from './app.routing';
 import { GlobalDirective } from './global.directive';
-import { ModalComponent } from './1/footer/modal/modal.component';
 
 @NgModule({
   declarations: [

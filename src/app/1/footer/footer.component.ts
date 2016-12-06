@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-footer',
@@ -15,6 +16,9 @@ export class FooterComponent implements OnInit {
   returnAddress = '7308 S Alton Way Suite 2-A, Centennial,CO 80112';
   phone = '(888) 312-9976';
   email = 'care@trycjskincream.com';
+
+  @ViewChild(ModalComponent)
+  public readonly modal: ModalComponent;
 
   constructor() { }
 
