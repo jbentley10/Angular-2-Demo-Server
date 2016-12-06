@@ -30,6 +30,7 @@ import { FooterComponent } from './1/footer/footer.component';
 
 import { routing } from './app.routing';
 import { GlobalDirective } from './global.directive';
+import { ModalComponent } from './1/footer/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { GlobalDirective } from './global.directive';
     ThankMainComponent,
     CheckHeaderComponent,
     GlobalDirective,
-    TermsComponent
+    TermsComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
