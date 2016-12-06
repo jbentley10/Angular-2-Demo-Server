@@ -1,5 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
-import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +6,7 @@ import { ModalComponent } from 'ng2-bs3-modal/ng2-bs3-modal';
   styleUrls: ['./footer.component.scss']
 })
 
-export class FooterComponent {
+export class FooterComponent implements OnInit {
   // Contact and product information
   productName = 'Muscle Enhance';
   url = 'trycjskincream.com';
@@ -16,18 +15,6 @@ export class FooterComponent {
   returnAddress = '7308 S Alton Way Suite 2-A, Centennial,CO 80112';
   phone = '(888) 312-9976';
   email = 'care@trycjskincream.com';
-
-  // Modal
-  @ViewChild('termsModal')
-    modal: ModalComponent;
-
-  close() {
-    this.modal.close();
-  }
-
-  open() {
-    this.modal.open();
-  }
 
   constructor() { }
 

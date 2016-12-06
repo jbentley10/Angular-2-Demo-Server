@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Modal module
-import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
-
 import { AppComponent } from './app.component';
 
 // Landing Page
@@ -50,15 +47,13 @@ import { GlobalDirective } from './global.directive';
     ThankMainComponent,
     CheckHeaderComponent,
     GlobalDirective,
-    TermsComponent,
-    ModalComponent
+    TermsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
-    Ng2Bs3ModalModule
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

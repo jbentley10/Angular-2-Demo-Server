@@ -7,5 +7,6 @@ import { FooterComponent } from './1/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
 }
