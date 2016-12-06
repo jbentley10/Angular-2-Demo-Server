@@ -4,12 +4,14 @@ import { LanderComponent } from './1/lander/lander.component';
 import { CheckoutComponent } from './1/checkout/checkout.component';
 import { ThankyouComponent } from './1/thankyou/thankyou.component';
 import { TermsComponent } from './1/terms/terms.component';
+import { ModalComponent } from './1/footer/modal/modal.component';
 
 const APP_ROUTES: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'thankyou', component: ThankyouComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'lander', component: LanderComponent },
+  { path: 'modal', component: ModalComponent },
   { path: '', component: LanderComponent }
 ];
 

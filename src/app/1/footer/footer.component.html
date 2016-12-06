@@ -1,3 +1,6 @@
+<!-- Modal
+<app-modal></app-modal>
+
 <!-- Footer -->
 <footer class="footer-basic-centered">
 
@@ -10,7 +13,8 @@
 
   <p class="footer-links">
     <a class="footer-link" routerLink="/terms" routerLinkActive="active">Terms and Conditions</a> &bull;
-    <a class="footer-link" href="javascript:void(0);" onclick="javascript:openNewWindow('privacy.php', 'modal');">Privacy Policy</a> &bull;
+    <a class="footer-link" (click)="modal.open()">Privacy Policy</a> &bull;
+    <button type="button" class="btn btn-default" (click)="modal.open()">Open me!</button> &bull;
     <a class="footer-link" href="javascript:void(0);" onclick="javascript:openNewWindow('contact.php', 'modal');">Contact Us</a> &bull;
     <a class="footer-link" href="javascript:void(0);" onclick="javascript:openNewWindow('ingredients.php', 'modal');">Ingredients</a>
   </p>
