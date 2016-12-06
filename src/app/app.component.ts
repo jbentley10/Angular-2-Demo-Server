@@ -8,6 +8,4 @@ import { FooterComponent } from './1/footer/footer.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'This should be green!';
-  subTitle = 'This should be red';
 }

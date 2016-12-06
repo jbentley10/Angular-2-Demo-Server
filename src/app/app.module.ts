@@ -25,9 +25,6 @@ import { CheckMainComponent } from './1/checkout/check-main/check-main.component
 import { ThankMainComponent } from './1/thankyou/thank-main/thank-main.component';
 import { ThankyouComponent } from './1/thankyou/thankyou.component';
 
-// Modal
-import { ModalComponent } from './1/footer/modal/modal.component';
-
 // Terms Page
 import { TermsComponent } from './1/terms/terms.component';
 
