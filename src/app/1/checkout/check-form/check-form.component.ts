@@ -8,26 +8,37 @@ import { NgForm, FormGroup, FormBuilder, Validators } from "@angular/forms";
   styleUrls: ['./check-form.component.scss']
 })
 export class CheckFormComponent {
-  checkForm : FormGroup;
+  //checkForm : FormGroup;
 
-  constructor(fb: FormBuilder){
-    this.checkForm = fb.group({
-      'billaddress' : [null, Validators.compose([Validators.required, Validators.minLength(5)])],
-      'billcity': [null, Validators.required],
-      'billstate': [null, Validators.required],
-      'billcountry': [null, Validators.required],
-      'billzip': [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(5)])],
-      'ccnumber': [null, Validators.compose([Validators.required, Validators.minLength(14), Validators.maxLength(15)])],
-      'cardExpMonth': [null, Validators.required],
-      'cardExpYear': [null, Validators.required],
-      'cvvnumber': [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(4)])],
-      'confirm': false
-    })
+  // constructor(fb: FormBuilder){
+  //   this.checkForm = fb.group({
+  //     'billaddress' : [null, Validators.compose([Validators.required, Validators.minLength(5)])],
+  //     'billcity': [null, Validators.required],
+  //     'billstate': [null, Validators.required],
+  //     'billcountry': [null, Validators.required],
+  //     'billzip': [null, Validators.compose([Validators.required, Validators.minLength(5), Validators.maxLength(5)])],
+  //     'ccnumber': [null, Validators.compose([Validators.required, Validators.minLength(14), Validators.maxLength(15)])],
+  //     'cardExpMonth': [null, Validators.required],
+  //     'cardExpYear': [null, Validators.required],
+  //     'cvvnumber': [null, Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(4)])],
+  //     'confirm': false
+  //   })
+  // }
+
+  onSubmit(form: any){
+    console.log('you submitted value:', form);
+    console.log(form.fName);
+    var fName = form.fName;
+    var lName = form.lName;
+    console.log(fName, lName);
+    return fName;
   }
 
   submitForm(value: any){
     console.log(value);
   }
+
+  constructor (public echos: GlobalDirective) {}
 
   public hideBilling = true;
 
