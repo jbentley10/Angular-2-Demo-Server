@@ -12,15 +12,15 @@
   <div id="hiddenbilling" [hidden]="hideBilling">
     <div class="form-group">
       <label for="billaddress">Address</label>
-      <input type="text" class="form-control" id="billaddress" pattern="" name="billaddress" placeholder="Address" oninvalid="this.setCustomValidity('Please Enter Your Full Address')" required ngModel>
+      <input type="text" class="form-control" id="billaddress" pattern="" name="billaddress" placeholder="Address" oninvalid="this.setCustomValidity('Please Enter Your Full Address')"  ngModel>
     </div>
     <div class="form-group">
       <label for="billcity">City</label>
-      <input type="text" class="form-control" id="billcity" pattern="" minlength="4" name="billcity" placeholder="City" oninvalid="this.setCustomValidity('Please Enter Your City')" onchange="this.setCustomValidity('')" required ngModel>
+      <input type="text" class="form-control" id="billcity" pattern="" minlength="4" name="billcity" placeholder="City" oninvalid="this.setCustomValidity('Please Enter Your City')" onchange="this.setCustomValidity('')"  ngModel>
     </div>
     <div class="form-group">
       <label for="billstate">State</label>
-      <select class="form-control" id="billstate" name="billstate" required ngModel>
+      <select class="form-control" id="billstate" name="billstate"  ngModel>
         <!-- TODO: Set Data binding *ngFor command  -->
         <option value="">Select State</option>
         <option value="AL">Alabama</option>
@@ -78,7 +78,7 @@
     </div>
     <div class="form-group">
       <label for="billcountry">Country</label>
-      <select class="form-control" required name="billcountry" ngModel>
+      <select class="form-control"  name="billcountry" ngModel>
         <!-- TODO: Set Data binding *ngFor command  -->
               <option value="">Select Country</option>
               <option value="US">United States</option>
@@ -86,19 +86,20 @@
     </div>
     <div class="form-group">
       <label for="billzip">Zip</label>
-      <input type="tel" name="billzip" id="billzip" placeholder="Zip Code" class="form-control" maxlength="5" minlength="5" required pattern="([1-9])+(?:-?\d){4,}" oninvalid="this.setCustomValidity('Please enter your 5 Digit zip')" onchange="this.setCustomValidity('')" ngModel>
+      <input type="tel" name="billzip" id="billzip" placeholder="Zip Code" class="form-control" maxlength="5" minlength="5"  pattern="([1-9])+(?:-?\d){4,}" oninvalid="this.setCustomValidity('Please enter your 5 Digit zip')" onchange="this.setCustomValidity('')" ngModel>
     </div>
   </div>
   <label>Credit Card:</label>
   <div class="form-group">
-    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number" required maxlength="16" minlength="15" oninvalid="this.setCustomValidity('Please enter your credit card number')" onchange="this.setCustomValidity('')" ngModel>
+    <input type="num" class="form-control ignore" id="ccnumber" name="ccnumber" placeholder="Card Number"  maxlength="16" minlength="15" oninvalid="this.setCustomValidity('Please enter your credit card number')" onchange="this.setCustomValidity('')" required ngModel>
   </div>
 
   <label>Expiration Date:</label>
   <div class="form-group">
     <label for="cardExpMonth">Month</label>
-    <select name="cardExpMonth" class="form-control" id="cardExpMonth" oninvalid="this.setCustomValidity('Please enter your card's expiration month)" onchange="this.setCustomValidity('')" ngModel>
-      <option value="1" selected>1</option>
+    <select name="cardExpMonth" class="form-control" id="cardExpMonth" oninvalid="this.setCustomValidity('Please enter your card's expiration month)" onchange="this.setCustomValidity('')" required ngModel>
+      <option value="" selected>Select Month</option>
+      <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
       <option value="4">4</option>
@@ -115,8 +116,9 @@
   </div>
   <div class="form-group">
     <label for="cardExpYear">Year</label>
-    <select name="cardExpYear" class="form-control" id="cardExpYear" oninvalid="this.setCustomValidity('Please enter your card's expiration year')" onchange="this.setCustomValidity('')" ngModel>
-      <option value="2016" selected>2016</option>
+    <select name="cardExpYear" class="form-control" id="cardExpYear" oninvalid="this.setCustomValidity('Please enter your card's expiration year')" onchange="this.setCustomValidity('')" required ngModel>
+      <option value="" selected>Select Year</option>
+      <option value="2016" >2016</option>
       <option value="2017">2017</option>
       <option value="2018">2018</option>
       <option value="2019">2019</option>
