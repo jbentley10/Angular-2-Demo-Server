@@ -10,7 +10,7 @@ import { MainFormComponent } from '../../lander/main-form/main-form.component';
 })
 export class ThankMainComponent implements OnInit {
 
-  
+  test : Date = new Date();
 
   constructor (public echos: GlobalDirective,public form: MainFormComponent) {}
 
