@@ -12,12 +12,15 @@ import { MainFormComponent } from '../../lander/main-form/main-form.component';
 export class ThankMainComponent {
   testMessage: any;
   anotherTest: any;
+  fName: any;
 
-  public formFName;
+  // constructor (public echos: GlobalDirective,public form: MainFormComponent) {
+  //   this.testMessage = 'Im dancin like a monkey!';
+  //   this.anotherTest = 'What is up';
+  // }
 
-  constructor (public echos: GlobalDirective,public form: MainFormComponent) {
-    this.testMessage = 'Im dancin like a monkey!';
-    this.anotherTest = 'What is up';
+  constructor(public echos: GlobalDirective) {
+    console.log("TEST");
   }
 
   ngOnInit() {

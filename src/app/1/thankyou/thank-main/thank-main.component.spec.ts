@@ -27,7 +27,7 @@ describe('ThankMainComponent', () => {
     //fixture.detectChanges();
 
     // query for the title <h1> by CSS element selector
-    de = fixture.debugElement.query(By.css('em'));
+    de = fixture.debugElement.query(By.css('span'));
     el = de.nativeElement;
   });
 
@@ -38,6 +38,6 @@ describe('ThankMainComponent', () => {
 
   it('should display original message', () => {
     fixture.detectChanges();
-    expect(el.textContent).toContain(comp.testMessage);
+    expect(el.textContent).toContain(comp.fName);
   });
 });
