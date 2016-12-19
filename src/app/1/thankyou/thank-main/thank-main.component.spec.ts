@@ -26,9 +26,13 @@ describe('ThankMainComponent', () => {
 
     //fixture.detectChanges();
 
-    // query for the title <h1> by CSS element selector
-    de = fixture.debugElement.query(By.css('span'));
-    el = de.nativeElement;
+    // query for the form element that the user put in
+    formDebugElement = fixture.debugElement.query(By.css('span'));
+    formElement = formDebugElement.nativeElement;
+
+    // query for the variable names that are unique to the website (display variables)
+    displayDebugElement = fixture.debugElement.query(By.css('span'));
+    displayElement = displayDebugElement.nativeElement;
   });
 
   // TESTS TO RUN
@@ -36,8 +40,13 @@ describe('ThankMainComponent', () => {
     expect(comp).toBeTruthy();
   });
 
-  it('should display original message', () => {
+  it('should display the name of the customer', () => {
     fixture.detectChanges();
-    expect(el.textContent).toContain(comp.fName);
+    expect(formElement.textContent).toContain(comp.fName);
+  });
+
+  it('should display the product name created in the global variables page', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.fName);
   });
 });

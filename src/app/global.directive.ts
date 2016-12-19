@@ -8,7 +8,6 @@ import { Directive, Injectable } from '@angular/core';
 @Injectable()
 export class GlobalDirective {
 
-
   //FooterComponent
   productName = 'Muscle Enhance';
   url = 'trycjskincream.com';
@@ -23,7 +22,6 @@ export class GlobalDirective {
   csBulletOne = '100% potent L-Arginine enhancement';
   csBulletTwo = 'May increase blood flow and improve muscular tone';
   csBulletThree = 'May help achieve ideal physique';
-
 }
 // import { Directive, Injectable, OnInit } from '@angular/core';
 // import {Http, Response, Headers, RequestOptions} from "@angular/http";
