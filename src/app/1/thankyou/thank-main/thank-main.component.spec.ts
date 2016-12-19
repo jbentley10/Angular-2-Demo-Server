@@ -49,4 +49,39 @@ describe('ThankMainComponent', () => {
     fixture.detectChanges();
     expect(displayElement.textContent).toContain(comp.fName);
   });
+
+  it('should display the url of the website', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.url);
+  });
+
+  it('should display the corporate name', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.corpName);
+  });
+
+  it('should display the return address', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.returnAddress);
+  });
+
+  it('should display the phone number', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.phone);
+  });
+
+  it('should display the email', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.email);
+  });
+
+  it('should display the price', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.price);
+  });
+
+  it('should display the price', () => {
+    fixture.detectChanges();
+    expect(displayElement.textContent).toContain(comp.price);
+  });
 });
