@@ -39,7 +39,8 @@ import { routing } from './app.routing';
 // Global Variables
 import { GlobalDirective } from './global.directive';
 
-
+// Data Service
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { GlobalDirective } from './global.directive';
     HttpModule,
     routing
   ],
-  providers: [GlobalDirective, Title],
+  providers: [GlobalDirective, Title, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

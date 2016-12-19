@@ -26,6 +26,10 @@ describe('ThankMainComponent', () => {
 
     //fixture.detectChanges();
 
+    // query for the TEST variable
+    testDebugElement = fixture.testElement.query(By.css('em'));
+    testElement = testDebugElement.nativeElement;
+
     // query for the form element that the user put in
     formDebugElement = fixture.debugElement.query(By.css('span'));
     formElement = formDebugElement.nativeElement;
@@ -40,48 +44,55 @@ describe('ThankMainComponent', () => {
     expect(comp).toBeTruthy();
   });
 
+  // TEST Variable
+  it('should display the product name', () => {
+    fixture.detectChanges();
+    console.log("I got the name of the product! It's " + comp.productName);
+    expect(testElement.textContent).toContain(comp.productName);
+  });
+
   it('should display the name of the customer', () => {
     fixture.detectChanges();
     expect(formElement.textContent).toContain(comp.fName);
   });
 
-  it('should display the product name created in the global variables page', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.fName);
-  });
-
-  it('should display the url of the website', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.url);
-  });
-
-  it('should display the corporate name', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.corpName);
-  });
-
-  it('should display the return address', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.returnAddress);
-  });
-
-  it('should display the phone number', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.phone);
-  });
-
-  it('should display the email', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.email);
-  });
-
-  it('should display the price', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.price);
-  });
-
-  it('should display the price', () => {
-    fixture.detectChanges();
-    expect(displayElement.textContent).toContain(comp.price);
-  });
+  // it('should display the product name created in the global variables page', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.fName);
+  // });
+  //
+  // it('should display the url of the website', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.url);
+  // });
+  //
+  // it('should display the corporate name', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.corpName);
+  // });
+  //
+  // it('should display the return address', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.returnAddress);
+  // });
+  //
+  // it('should display the phone number', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.phone);
+  // });
+  //
+  // it('should display the email', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.email);
+  // });
+  //
+  // it('should display the price', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.price);
+  // });
+  //
+  // it('should display the price', () => {
+  //   fixture.detectChanges();
+  //   expect(displayElement.textContent).toContain(comp.price);
+  // });
 });

@@ -5,12 +5,12 @@
       <div class="col-md-12">
 
         <!-- Use a test message -->
-        <em>{{ testMessage }}</em>
+        <em>{{ echos.productName }}</em>
 
         <!-- Try and get what the form input is -->
         <p>The form displayed this: {{ fName }}</p>
 
-        <strong>Thank you <span [innerText]="form.fName">{{ fName }}</span> for your purchase!</strong>
+        <strong>Thank you <span [innerText]="echos.fName">{{ fName }}</span> for your purchase!</strong>
         <p>
           We hope you enjoy the benefits of <span id="product-name" [innerText]="echos.productName"></span><br /> Your order is scheduled to arrive by
         </p>
