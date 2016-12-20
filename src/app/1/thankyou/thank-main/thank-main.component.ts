@@ -16,6 +16,7 @@ export class ThankMainComponent {
   anotherTest: any;
   fName: any;
   productName: any;
+  todayDate: Date = new Date();
 
   // constructor (public echos: GlobalDirective,public form: MainFormComponent) {
   //   this.testMessage = 'Im dancin like a monkey!';
@@ -36,7 +37,6 @@ export class ThankMainComponent {
   }
 
   constructor(public echos: GlobalDirective) {
-    this.productName = this.echos.productName;
     console.log("product name is: " + this.productName);
   }
 }

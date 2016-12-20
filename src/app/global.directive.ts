@@ -61,6 +61,7 @@ export class GlobalDirective implements OnInit {
 
   ngOnInit(){
     this.getData();
+    this.getProductName();
   }
 
 }

@@ -1,17 +1,21 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { GlobalDirective } from '../../../global.directive';
+import { DataService } from '../../../data.service';
 import { DebugElement } from '@angular/core';
 
 import { ThankMainComponent } from './thank-main.component';
 
 describe('ThankMainComponent', () => {
-  let comp:      ThankMainComponent;
-  let fixture:   ComponentFixture<ThankMainComponent>;
-  let de:        DebugElement;
-  let el:        HTMLElement;
-  let debugH1:   DebugElement;
-  let elementH1: HTMLElement;
+  let comp:                       ThankMainComponent;
+  let fixture:                    ComponentFixture<ThankMainComponent>;
+  let testDebugElement:           DebugElement;
+  let formDebugElement:           DebugElement;
+  let displayDebugElement:        DebugElement;
+  let testElement:                HTMLElement;
+  let formElement:                HTMLElement;
+  let displayElement:             HTMLElement;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -23,9 +27,10 @@ describe('ThankMainComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ThankMainComponent);
     comp = fixture.componentInstance; // ThankMainComponent test instance
+    fixture.detectChanges();
 
     // query for the TEST variable
-    testDebugElement = fixture.testElement.query(By.css('em'));
+    testDebugElement = fixture.debugElement.query(By.css('em'));
     testElement = testDebugElement.nativeElement;
 
     // query for the form element that the user put in
@@ -37,14 +42,13 @@ describe('ThankMainComponent', () => {
     displayElement = displayDebugElement.nativeElement;
   });
 
-  // TESTS TO RUN
-  it('should create', () => {
-    expect(comp).toBeTruthy();
-  });
+  // // TESTS TO RUN
+  // it('should create', () => {
+  //   expect(comp).toBeTruthy();
+  // });
 
   // TEST Variable
   it('should display the product name', () => {
-    console.log("I got the name of the product! It's " + comp.productName);
     expect(testElement.textContent).toContain(comp.productName);
   });
 

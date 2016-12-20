@@ -3,10 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { CheckoutComponent } from './checkout.component';
-import { CheckHeaderComponent } from './check-header/check-header.component';
-import { CheckMainComponent } from './check-main/check-main.component';
-import { CheckFormComponent } from './check-form/check-form.component';
+import { CheckoutComponent } from '../checkout/checkout.component';
+import { CheckHeaderComponent } from '../checkout/check-header/check-header.component';
+import { CheckMainComponent } from '../checkout/check-main/check-main.component';
+import { CheckFormComponent } from '../checkout/check-form/check-form.component';
 import { FooterComponent } from '../footer/footer.component';
 
 describe('FooterComponent', () => {

@@ -2,7 +2,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { Cs2Component } from './cs-1.component';
+import { Cs2Component } from './cs-2.component';
 
 describe('Cs2Component', () => {
   let component: Cs2Component;

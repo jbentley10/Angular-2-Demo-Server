@@ -20,8 +20,8 @@ export class DataService {
 	}
 
 	getProductName() {
-		return this.http.request(this._request)
-		.map((res => res.json()));
+		return this.http.get(this.varsUrl)
+		.map((response: Response) => response.json());
 	}
 
 	private handleError(error: any): Promise<any> {
