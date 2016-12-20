@@ -20,7 +20,12 @@ export class FooterComponent implements OnInit {
   @ViewChild(ModalComponent)
   public readonly modal: ModalComponent;
 
+  getData() {
+    this.echos.getData();
+  }
+
   ngOnInit() {
+    this.getData();
   }
 
 }

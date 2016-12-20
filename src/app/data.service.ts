@@ -1,5 +1,5 @@
 import { Directive, Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from "@angular/http";
+import { Http, Response, Headers, Request, RequestOptions } from "@angular/http";
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 
@@ -9,9 +9,19 @@ export class DataService {
 
 	constructor(private http:Http) {}
 
+	private _request = new Request({
+		method: "GET",
+		url: this.varsUrl
+	});
+
 	getData(){
 		return this.http.get(this.varsUrl)
 		.map((response: Response) => response.json());
+	}
+
+	getProductName() {
+		return this.http.request(this._request)
+		.map((res => res.json()));
 	}
 
 	private handleError(error: any): Promise<any> {

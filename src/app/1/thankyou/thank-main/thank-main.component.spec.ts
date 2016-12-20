@@ -24,8 +24,6 @@ describe('ThankMainComponent', () => {
     fixture = TestBed.createComponent(ThankMainComponent);
     comp = fixture.componentInstance; // ThankMainComponent test instance
 
-    //fixture.detectChanges();
-
     // query for the TEST variable
     testDebugElement = fixture.testElement.query(By.css('em'));
     testElement = testDebugElement.nativeElement;
@@ -46,15 +44,14 @@ describe('ThankMainComponent', () => {
 
   // TEST Variable
   it('should display the product name', () => {
-    fixture.detectChanges();
     console.log("I got the name of the product! It's " + comp.productName);
     expect(testElement.textContent).toContain(comp.productName);
   });
 
-  it('should display the name of the customer', () => {
-    fixture.detectChanges();
-    expect(formElement.textContent).toContain(comp.fName);
-  });
+  // it('should display the name of the customer', () => {
+  //   fixture.detectChanges();
+  //   expect(formElement.textContent).toContain(comp.fName);
+  // });
 
   // it('should display the product name created in the global variables page', () => {
   //   fixture.detectChanges();

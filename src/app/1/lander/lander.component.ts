@@ -15,7 +15,12 @@ export class LanderComponent implements OnInit {
 
   constructor (public echos: GlobalDirective) {}
 
+  getData() {
+    this.echos.getData();
+  }
+
   ngOnInit() {
+    this.getData();
   }
 
 }

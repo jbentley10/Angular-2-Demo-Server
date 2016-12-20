@@ -48,6 +48,17 @@ export class GlobalDirective implements OnInit {
     )
   }
 
+  getProductName() {
+    this.dataService.getProductName()
+    .subscribe(
+      response => this.data = response[0],
+      error => console.error(error),
+      () => {
+        this.productName = this.data.productName;
+      }
+    )
+  }
+
   ngOnInit(){
     this.getData();
   }

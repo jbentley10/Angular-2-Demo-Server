@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GlobalDirective } from '../../../global.directive';
+import { DataService } from '../../../data.service';
 import { MainFormComponent } from '../../lander/main-form/main-form.component';
 import { Observable } from 'rxjs/Rx';
 
@@ -7,7 +8,7 @@ import { Observable } from 'rxjs/Rx';
   selector: 'app-thank-main',
   templateUrl: './thank-main.component.html',
   styleUrls: ['./thank-main.component.scss'],
-  providers: [GlobalDirective, MainFormComponent]
+  providers: [GlobalDirective, DataService]
 })
 
 export class ThankMainComponent {
@@ -21,14 +22,21 @@ export class ThankMainComponent {
   //   this.anotherTest = 'What is up';
   // }
 
-  constructor(public echos: GlobalDirective) {}
-
   getData() {
     this.echos.getData();
   }
 
-  ngOnInit() {
-    this.getData();
+  getProductName() {
+    this.echos.getProductName();
   }
 
+  ngOnInit() {
+    this.getData();
+    this.getProductName();
+  }
+
+  constructor(public echos: GlobalDirective) {
+    this.productName = this.echos.productName;
+    console.log("product name is: " + this.productName);
+  }
 }
