@@ -2,23 +2,21 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { Cs1Component } from './cs-1.component';
 
-import { MainInfoComponent } from './main-info.component';
-import { MainFormComponent } from '../main-form/main-form.component';
-
-describe('MainInfoComponent', () => {
-  let component: MainInfoComponent;
-  let fixture: ComponentFixture<MainInfoComponent>;
+describe('Cs1Component', () => {
+  let component: Cs1Component;
+  let fixture: ComponentFixture<Cs1Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainInfoComponent ]
+      declarations: [ Cs1Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainInfoComponent);
+    fixture = TestBed.createComponent(Cs1Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
